@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		form {
+			border: 2px solid black;
+		}
+
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+
+		button {
+			background-color: gray;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		.container {
+			padding: 16px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2> Employee Data </h2>
+
+	<form action="db_input.php" method="post">
+		<div class="container">
+			<label for="ename"><b>Employee Name</b></label>
+			<input type="text" placeholder="Enter employee name" name="ename" required>
+
+			<label for="address"><b>Employee Address</b></label>
+			<input type="text" placeholder="Enter employee address" name="address" required>
+
+			<label for="phno"><b>Employee Phone Number</b></label>
+			<input type="text" placeholder="Enter employee Phone no" name="phno" required>
+
+			<label for="salary"><b>Employee Salary</b></label>
+			<input type="text" placeholder="Enter employee salary" name="salary" required>
+
+			<p><b>Category</b></p>
+			<label for="gen"><b>GEN</b></label>
+			<input type="radio" id="gen" name="category" value="GEN">
+			<label for="st"><b>ST</b></label>
+			<input type="radio" id="st" name="category" value="ST">
+			<label for="sc"><b>SC</b></label>
+			<input type="radio" id="sc" name="category" value="SC">
+			<label for="obc"><b>OBC</b></label>
+			<input type="radio" id="obc" name="category" value="OBC">
+
+			<p><b>Language</b></p>
+			<label for="beng"><b>Bengali</b></label>
+			<input type="checkbox" name="lang[]" value="Beng">
+			<label for="eng"><b>English</b></label>
+			<input type="checkbox" name="lang[]" value="Eng">
+			<label for="hin"><b>Hindi</b></label>
+			<input type="checkbox" name="lang[]" value="Hin">
+
+			<button type="submit">Submit</button>
+		</div>
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+            }
+            button {
+                padding: 10px 10px;
+                margin: 8px 0;
+                cursor: pointer;
+            }
+
+            select {
+                padding: 20px 20px;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+            h2{
+                text-decoration: none;
+                font-size: 40px;
+                font-family: Algerian;
+                font-weight: lighter;
+            }
+            b{
+                font-size: 26px;
+                font-weight: lighter;
+                font-family: Berlin Sans FB;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h2>Employee Data</h2>
+        <div>
+            <form action="db_select.php" method="post">
+                <label for="field"><b>Select a Field to show the table, Order By the Attribute :</b></label>
+                <br>
+                <select name="field">
+                <option value="ename">Ename</option>
+                <option value="address">Address</option>
+                <option value="phone_no">Phone No.</option>
+                <option value="salary">Salary</option>
+                <option value="category">Category</option>
+                <option value="language">Language</option>
+                </select>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
