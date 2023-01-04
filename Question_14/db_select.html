@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+            }
+            button {
+                padding: 10px 10px;
+                margin: 8px 0;
+                cursor: pointer;
+            }
+
+            select {
+                padding: 20px 20px;
+                margin: 10px 0;
+                font-size: 20px;
+            }
+            h2{
+                text-decoration: none;
+                font-size: 40px;
+                font-family: Algerian;
+                font-weight: lighter;
+            }
+            b{
+                font-size: 26px;
+                font-weight: lighter;
+                font-family: Berlin Sans FB;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <h2>Players Maximum Runs</h2>
+        <div>
+            <form action="db_select.php" method="post">
+                <label for="field"><b>Select a Field to highest run scorer :</b></label>
+                <br>
+                <select name="field">
+                <option value="test_runs">Test Runs</option>
+                <option value="odi_runs">ODI Runs</option>
+                <option value="t20_runs">T20 Runs</option>
+                </select>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
