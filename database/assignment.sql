@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2023 at 06:32 AM
+-- Generation Time: Jan 04, 2023 at 03:58 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -87,6 +87,30 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 (1, 'testprogram', 'testprogram1'),
 (2, 'testprogram1', 'testprogram'),
 (3, 'testprogram2', 'testprogram3');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sports`
+--
+
+CREATE TABLE `sports` (
+  `id` int(11) NOT NULL,
+  `players` varchar(30) NOT NULL,
+  `test_runs` int(11) NOT NULL,
+  `odi_runs` int(11) NOT NULL,
+  `t20_runs` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sports`
+--
+
+INSERT INTO `sports` (`id`, `players`, `test_runs`, `odi_runs`, `t20_runs`) VALUES
+(1, 'Rohit', 200, 150, 100),
+(2, 'Munna', 500, 100, 50),
+(3, 'Rahul', 100, 50, 300),
+(4, 'Romit', 400, 300, 100);
 
 -- --------------------------------------------------------
 
@@ -180,6 +204,12 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `sports`
+--
+ALTER TABLE `sports`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `student_info`
 --
 ALTER TABLE `student_info`
@@ -213,6 +243,12 @@ ALTER TABLE `food_details`
 --
 ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `sports`
+--
+ALTER TABLE `sports`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `student_info`
