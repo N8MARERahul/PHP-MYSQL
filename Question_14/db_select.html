@@ -15,22 +15,29 @@
                 margin: 10px 0;
                 font-size: 20px;
             }
-            h2{
-                text-decoration: none;
-                font-size: 40px;
-                font-family: Algerian;
-                font-weight: lighter;
-            }
             b{
                 font-size: 26px;
                 font-weight: lighter;
                 font-family: Berlin Sans FB;
             }
+            .neon-text{
+                text-decoration: none;
+                font-size: 40px;
+                font-family: Algerian;
+                color: rgb(255, 255, 255);
+                font-weight: lighter;
+
+                text-shadow:
+                0 0 5px rgb(0, 145, 255),
+                0 0 10px rgb(35, 158, 251),
+                0 0 20px rgb(72, 174, 251),
+                0 0 30px rgb(146, 207, 253);
+            }
         </style>
     </head>
     <body>
         <br>
-        <h2>Players Maximum Runs</h2>
+        <h2 class="neon-text">Players Maximum Runs</h2>
         <div>
             <form action="db_select.php" method="post">
                 <label for="field"><b>Select a Field to highest run scorer :</b></label>
